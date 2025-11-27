@@ -3,7 +3,7 @@ name: first-ci
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   show-info:
