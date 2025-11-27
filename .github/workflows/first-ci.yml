@@ -1,0 +1,22 @@
+name: first-ci
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  show-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello GitHub Actions from Spring Boot project!"
+
+      - name: Show GitHub actor
+        run: echo "${{ github.actor }}"
+
+      - name: Show branch and commit
+        shell: bash
+        run: |
+          echo "Ref: ${{ github.ref }}"
+          echo "Commit SHA: ${{ github.sha }}"
